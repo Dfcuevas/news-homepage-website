@@ -1,0 +1,58 @@
+@use '../../styles/variables';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+  .nav {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    padding: 140px 15px 15px;
+    width: 70%;
+    overflow: hidden;
+    
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      list-style-type: none;
+      padding: 5px;
+      text-align: left;
+      & li {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .menu-btn {
+    z-index: 1000;
+    cursor: pointer;
+
+    & img {
+      width: 40px;
+    }
+  }
+
+  .pruebAnimation {
+    animation: translateNav 0.5s ease-out;
+  }
+
+  @keyframes translateNav {
+    from {
+      transform: translate(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  .display-none {
+    display: none;
+  }
+}

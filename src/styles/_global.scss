@@ -1,0 +1,17 @@
+@use 'variables';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  padding: 20px 15px;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: variables.$off-white;
+} 
