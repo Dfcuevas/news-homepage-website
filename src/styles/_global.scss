@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'mixins';
 
 html {
   box-sizing: border-box;
@@ -9,9 +10,17 @@ html {
 
 body {
   position: relative;
+  font-size: variables.$size-paragraph;
   padding: 20px 15px;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   background-color: variables.$off-white;
+  @include mixins.fontWeight;
 } 
+
+@media (min-width: 577px) {
+  body {
+    padding: 3rem 5rem;
+  }
+}

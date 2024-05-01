@@ -1,0 +1,9 @@
+@use 'variables';
+
+@mixin fontWeight($weight: variables.$size-400) {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}

@@ -1,0 +1,74 @@
+@use '../../styles/variables';
+
+.home-img {
+  background-image: url(../../../public/image-web-3-mobile.jpg);
+  width: 100%;
+  height: 50vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+
+.article {
+  &__h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 3.5rem;
+  }
+
+  &-content {
+    &__paragraph {
+      font-size: 1.25rem;
+      color: variables.$dark-grayish-blue;
+      line-height: 1.6;
+      margin-bottom: 35px;
+    }
+
+    &__read-more {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: variables.$size-700;
+      background-color: variables.$soft-red;
+      color: variables.$off-white;
+      padding: 1rem 3rem;
+      letter-spacing: 3px;
+
+      &:hover {
+        background-color: variables.$very-dark-blue;
+      }
+    }
+  }
+
+  
+}
+
+
+@media (min-width: 700px)  {
+  .home-img {
+    background-image: url(../../../public/image-web-3-desktop.jpg);
+    height: 30vh;
+    background-size: cover;
+  }
+
+  .article {
+    display: flex;
+    
+    justify-content: space-between;
+    gap: 2rem;
+
+    &__h1 {
+      flex-shrink: 1;
+
+    }
+
+    &-content {
+      flex-shrink: 1;
+  
+      
+      &__paragraph {
+        margin-top: 0;
+      }
+    }
+  }
+
+}

@@ -4,7 +4,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
+
+.nav {
+  &__list {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 5px;
+    text-align: left;
+    & li {
+      cursor: pointer;
+
+      &:hover {
+        color: variables.$soft-red;
+      }
+    }
+  }
+}
+
+.menu-btn {
+  display: none;
+}
+
 
 @media (max-width: 576px) {
   .nav {
@@ -16,6 +39,8 @@
     padding: 140px 15px 15px;
     width: 70%;
     overflow: hidden;
+    font-weight: variables.$size-700;
+    background-color: variables.$off-white;
     
     &__list {
       display: flex;
@@ -24,13 +49,19 @@
       list-style-type: none;
       padding: 5px;
       text-align: left;
+      
       & li {
         cursor: pointer;
+
+        &:hover {
+          color: variables.$soft-red;
+        }
       }
     }
   }
 
   .menu-btn {
+    display: block;
     z-index: 1000;
     cursor: pointer;
 
@@ -54,5 +85,10 @@
 
   .display-none {
     display: none;
+  }
+
+  .bodyOpacity {
+    background-color: rgba(0, 0, 26, 0.7);
+    z-index: -1;
   }
 }

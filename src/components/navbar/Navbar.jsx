@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./_navbar.scss";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    const body = document.body;
+    showMenu
+      ? body.classList.add("bodyOpacity")
+      : body.classList.remove("bodyOpacity");
+  }, [showMenu]);
+
   return (
     <header className="header">
       <div className="logo-container">
