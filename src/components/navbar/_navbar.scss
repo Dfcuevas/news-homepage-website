@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
+  
 }
 
 .nav {
@@ -64,9 +65,10 @@
     display: block;
     z-index: 1000;
     cursor: pointer;
-
+ 
     & img {
       width: 40px;
+     
     }
   }
 

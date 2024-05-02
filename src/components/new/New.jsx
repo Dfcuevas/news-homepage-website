@@ -18,7 +18,17 @@ const news = [
 ];
 
 const New = () => {
-  return <section>New</section>;
+  return (
+    <section className="news">
+      <h2 className="news-title">New</h2>
+      {news.map((n, i) => (
+        <article key={i} className="news__article">
+          <h3 className="news__article-heading">{n.title}</h3>
+          <p className="news__article-paragraph">{n.entry}</p>
+        </article>
+      ))}
+    </section>
+  );
 };
 
 export default New;
